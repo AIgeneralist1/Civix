@@ -1,0 +1,5 @@
+/* App.css — global layout only; component styles live in their own .css files */
+
+#main-content {
+  min-height: calc(100vh - var(--nav-h));
+}

@@ -1,0 +1,70 @@
+/* Dashboard quick grid */
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px;
+}
+
+.quick-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    text-align: left;
+    color: var(--text);
+    transition: all 0.22s ease;
+}
+
+.quick-card:hover {
+    border-color: rgba(59, 130, 246, 0.35);
+    background: var(--surface-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.quick-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.quick-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--heading);
+    margin-bottom: 2px;
+}
+
+.quick-desc {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.quick-arrow {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.quick-card:hover .quick-arrow {
+    transform: translateX(4px);
+    color: #60a5fa;
+}
+
+/* metric-value for text strings */
+.metric-value.label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 10px;
+    line-height: 1.4;
+}

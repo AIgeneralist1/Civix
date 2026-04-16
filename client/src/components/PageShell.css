@@ -1,0 +1,216 @@
+/* ── PageShell ──────────────────────────────────────── */
+.page-shell {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px 32px 60px;
+    display: grid;
+    gap: 32px;
+}
+
+.page-header {
+    display: grid;
+    gap: 8px;
+}
+
+.page-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 99px;
+    background: var(--tag);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    color: #93c5fd;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.page-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    background: linear-gradient(120deg, var(--heading), #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: var(--text);
+    max-width: 70ch;
+}
+
+.page-body {
+    display: grid;
+    gap: 24px;
+}
+
+/* ── Card ───────────────────────────────────────────── */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color 0.2s;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.card-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.card-heading {
+    font-size: 1.1rem;
+    color: var(--heading);
+    margin-bottom: 18px;
+}
+
+/* ── Metric row ─────────────────────────────────────── */
+.metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.metric {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.2s;
+}
+
+.metric:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.metric-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--heading);
+    line-height: 1.1;
+    margin-top: 8px;
+}
+
+.metric-value.accent {
+    color: #60a5fa;
+}
+
+.metric-value.success {
+    color: #34d399;
+}
+
+.metric-value.danger {
+    color: #f87171;
+}
+
+.metric-value.warning {
+    color: #fbbf24;
+}
+
+/* ── Tag chips ──────────────────────────────────────── */
+.chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: var(--tag);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.chip.green {
+    background: rgba(16, 185, 129, 0.12);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.chip.yellow {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.chip.red {
+    background: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.chip.purple {
+    background: rgba(139, 92, 246, 0.12);
+    color: #c4b5fd;
+    border-color: rgba(139, 92, 246, 0.2);
+}
+
+/* ── Shared btn ─────────────────────────────────────── */
+.btn-primary {
+    appearance: none;
+    border: none;
+    border-radius: 12px;
+    padding: 11px 22px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.45);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-ghost {
+    appearance: none;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 20px;
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-ghost:hover {
+    border-color: var(--accent);
+    color: var(--heading);
+}
+
+@media (max-width: 760px) {
+    .page-shell {
+        padding: 24px 16px 48px;
+    }
+}

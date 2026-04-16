@@ -1,0 +1,132 @@
+/* Shared info page (Architecture + Security) styles */
+
+/* Architecture steps grid */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.step-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    display: grid;
+    gap: 10px;
+    transition: all 0.22s ease;
+}
+
+.step-card:hover {
+    border-color: rgba(139, 92, 246, 0.35);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.step-number {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+.step-icon {
+    font-size: 2rem;
+}
+
+.step-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0;
+}
+
+.step-desc {
+    font-size: 0.875rem;
+    color: var(--text);
+    line-height: 1.65;
+}
+
+/* Pipeline flow */
+.pipeline-flow {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 20px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pipeline-node {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pipeline-icon {
+    font-size: 1.2rem;
+}
+
+.pipeline-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--heading);
+}
+
+.pipeline-arrow {
+    color: var(--muted);
+    font-size: 1.1rem;
+    margin: 0 4px;
+}
+
+/* Security cards */
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.security-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    transition: all 0.22s ease;
+}
+
+.security-card:hover {
+    border-color: rgba(239, 68, 68, 0.25);
+    transform: translateY(-2px);
+}
+
+.security-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: rgba(239, 68, 68, 0.08);
+    border-radius: 12px;
+    border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.security-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--heading);
+    margin: 0 0 6px;
+}
+
+.security-desc {
+    font-size: 0.875rem;
+    color: var(--text);
+    line-height: 1.65;
+}
